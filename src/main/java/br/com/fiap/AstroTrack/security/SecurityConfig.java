@@ -30,7 +30,8 @@ public class SecurityConfig {
 				.cors(cors -> cors.configurationSource(corsConfigurationSource()))
 				.exceptionHandling(exception -> exception.authenticationEntryPoint(authenticationEntryPoint))
 				.authorizeHttpRequests(req -> req
-						.requestMatchers("/auth/**", "/swagger-ui/**", "/swagger-ui.html", "/v3/api-docs/**",
+						.requestMatchers("/", "/health", "/auth/**", "/swagger-ui/**", "/swagger-ui.html",
+								"/v3/api-docs", "/v3/api-docs/**",
 								"/error")
 						.permitAll()
 						.anyRequest().authenticated())

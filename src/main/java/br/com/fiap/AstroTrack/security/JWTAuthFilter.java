@@ -23,21 +23,38 @@ public class JWTAuthFilter extends OncePerRequestFilter {
 	private final UserDetailsService detailsService;
 
 	@Override
+	protected boolean shouldNotFilter(HttpServletRequest request) throws ServletException {
+		String path = request.getServletPath();
+
+		return path.equals("/")
+				|| path.equals("/health")
+				|| path.startsWith("/auth/")
+				|| path.equals("/swagger-ui.html")
+				|| path.startsWith("/swagger-ui/")
+				|| path.equals("/v3/api-docs")
+				|| path.startsWith("/v3/api-docs/")
+				|| path.equals("/error");
+	}
+
+	@Override
 	protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain)
 			throws ServletException, IOException {
 		String header = request.getHeader("Authorization");
 
-		if (header != null && header.startsWith("Bearer ")) {
-			String token = header.substring(7);
-			String username = jwtUtil.extrairUsername(token);
+		if (header == null || !header.startsWith("Bearer ")) {
+			filterChain.doFilter(request, response);
+			return;
+		}
 
-			if (username != null && SecurityContextHolder.getContext().getAuthentication() == null) {
-				UserDetails usuario = detailsService.loadUserByUsername(username);
+		String token = header.substring(7);
+		String username = jwtUtil.extrairUsername(token);
 
-				if (jwtUtil.validarToken(token)) {
-					var autenticacao = new UsernamePasswordAuthenticationToken(usuario, null, usuario.getAuthorities());
-					SecurityContextHolder.getContext().setAuthentication(autenticacao);
-				}
+		if (username != null && SecurityContextHolder.getContext().getAuthentication() == null) {
+			UserDetails usuario = detailsService.loadUserByUsername(username);
+
+			if (jwtUtil.validarToken(token)) {
+				var autenticacao = new UsernamePasswordAuthenticationToken(usuario, null, usuario.getAuthorities());
+				SecurityContextHolder.getContext().setAuthentication(autenticacao);
 			}
 		}
 
