@@ -18,7 +18,8 @@ O AstroTrack foi desenvolvido em Java 21 com Spring Boot 3, seguindo arquitetura
 
 | Recurso | Link |
 | --- | --- |
-| Deploy da API | `https://astrotrack-api.onrender.com` | e Deploy com swagger|`https://astrotrack-api.onrender.com/swagger-ui/index.html#/`|
+| Deploy da API | `https://astrotrack-api.onrender.com` |
+|Deploy com swagger|`https://astrotrack-api.onrender.com/swagger-ui/index.html#/`|
 | Video de apresentacao | `https://youtu.be/Q7ORViTjn7Q` |
 | Repositorio GitHub | `https://github.com/AstroTrack/GS_java` |
 | Swagger local | `http://localhost:8080/swagger-ui/index.html` |
