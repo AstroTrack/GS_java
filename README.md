@@ -4,13 +4,23 @@ API REST para logística satelital de frotas em regiões remotas, criada como so
 
 O AstroTrack foi desenvolvido em Java 21 com Spring Boot 3, seguindo arquitetura em camadas, persistência com Spring Data JPA, autenticação JWT, validações com Bean Validation, tratamento global de exceções, documentação OpenAPI/Swagger e endpoints dedicados para navegação HATEOAS.
 
+## Integrantes
+
+| Integrante | RM |
+|---|---:|
+| Arthur Correia Delila | 563806 |
+| Gabriel Henrique Souza Goncalves | 563732 |
+| Jose Ricardo Pereira Iannuzzi | 564112 |
+| Rafael de Freitas Moraes | 563210 |
+| Rafael Pascotte Mercadante | 564928 |
+
 ## Links do projeto
 
 | Recurso | Link |
 | --- | --- |
-| Deploy da API | `INSERIR_LINK_DO_DEPLOY_AQUI` |
+| Deploy da API | `https://astrotrack-api.onrender.com` | e Deploy com swagger|`https://astrotrack-api.onrender.com/swagger-ui/index.html#/`|
 | Video de apresentacao | `https://youtu.be/Q7ORViTjn7Q` |
-| Repositorio GitHub | `INSERIR_LINK_DO_REPOSITORIO_AQUI` |
+| Repositorio GitHub | `https://github.com/AstroTrack/GS_java` |
 | Swagger local | `http://localhost:8080/swagger-ui/index.html` |
 | Video pitch | `https://www.youtube.com/watch?v=nHatFjcTgdI` |
 
