@@ -9,10 +9,10 @@ O AstroTrack foi desenvolvido em Java 21 com Spring Boot 3, seguindo arquitetura
 | Recurso | Link |
 | --- | --- |
 | Deploy da API | `INSERIR_LINK_DO_DEPLOY_AQUI` |
-| Video de apresentacao | `INSERIR_LINK_DO_VIDEO_AQUI` |
+| Video de apresentacao | `https://youtu.be/Q7ORViTjn7Q` |
 | Repositorio GitHub | `INSERIR_LINK_DO_REPOSITORIO_AQUI` |
 | Swagger local | `http://localhost:8080/swagger-ui/index.html` |
-| OpenAPI JSON local | `http://localhost:8080/v3/api-docs` |
+| Video pitch | `https://www.youtube.com/watch?v=nHatFjcTgdI` |
 
 ## Tema da solucao
 
